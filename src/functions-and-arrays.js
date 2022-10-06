@@ -178,7 +178,19 @@ function uniquifyArray(arrayOfStrings)
   {
     return null;
   }
+  else{
+    newArray = [];
+    for (let index = 0; index < arrayOfStrings.length; index += 1)
+    {
+      if (newArray.includes(arrayOfStrings[index]) === false)
+      {
+        newArray.push(arrayOfStrings[index]);
+      }
+    }
+    return newArray;
+  }
 }
+
 
 
 // Iteration #6: Find elements
