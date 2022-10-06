@@ -45,27 +45,29 @@ console.log(sum(numbers2));
 */
 
 
-const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
-
-function averageNumbers(arrayOfNumbers) 
+// Level 2: Array of strings
+const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+const test = ["aber", "aberrr"];
+function averageWordLength(arrayOfStrings) 
 {
-  if (arrayOfNumbers.length === 0)
+  if (arrayOfStrings.length === 0)
   {
     return null;
   }
-  else if (arrayOfNumbers.length === 1)
+  else if (arrayOfStrings.length === 1)
   {
-    return arrayOfNumbers[0];
+    return arrayOfStrings[0].length ;
   }
   else
-  {
-    summ = 0;
-    for (let index = 0; index < arrayOfNumbers.length; index += 1)
+  { 
+    let count = 0;
+    for (let index = 0; index < arrayOfStrings.length; index += 1)
     {
-      summ += arrayOfNumbers[index];
-    }
-    return summ/arrayOfNumbers.length;
+      count += arrayOfStrings[index].length;
+      console.log(count);
+    } 
+    return count/arrayOfStrings.length;
   }
 }
 
-console.log(averageNumbers(numbersAvg));
+console.log(averageWordLength(test));
