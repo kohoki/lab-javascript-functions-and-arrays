@@ -45,3 +45,27 @@ console.log(sum(numbers2));
 */
 
 
+const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumbers(arrayOfNumbers) 
+{
+  if (arrayOfNumbers.length === 0)
+  {
+    return null;
+  }
+  else if (arrayOfNumbers.length === 1)
+  {
+    return arrayOfNumbers[0];
+  }
+  else
+  {
+    summ = 0;
+    for (let index = 0; index < arrayOfNumbers.length; index += 1)
+    {
+      summ += arrayOfNumbers[index];
+    }
+    return summ/arrayOfNumbers.length;
+  }
+}
+
+console.log(averageNumbers(numbersAvg));
