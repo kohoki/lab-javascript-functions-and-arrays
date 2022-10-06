@@ -69,7 +69,41 @@ function sumNumbers(arrayOfNumbers)
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum(arrayOfNumbers) 
+{
+  if (arrayOfNumbers.length === 0)
+  {
+    return 0;
+  }
+  else if (arrayOfNumbers.length === 1)
+  {
+    return arrayOfNumbers[0];
+  }
+  else
+  {
+    summ = 0;
+    for (let index = 0; index < arrayOfNumbers.length; index += 1)
+    {
+      if (typeof arrayOfNumbers[index] === "number" || typeof arrayOfNumbers[index] === "string" || typeof arrayOfNumbers[index] === "boolean")
+      {
+        if (typeof arrayOfNumbers[index] === "string")
+        {
+          summ += parseInt(arrayOfNumbers[index]);
+          
+        }
+        else
+        {
+          summ += arrayOfNumbers[index];
+        }
+      }
+      else
+      {
+        return error;
+      }
+    }
+    return summ;
+  }
+}
 
 
 

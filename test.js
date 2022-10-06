@@ -1,9 +1,10 @@
-// Iteration #3: Calculate the sum
+/* Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-const numbers2 = [1];
+const numbers2 = ["2", "1"];
 
-function sumNumbers(arrayOfNumbers) 
+// Iteration #3.1 Bonus:
+function sum(arrayOfNumbers) 
 {
   if (arrayOfNumbers.length === 0)
   {
@@ -15,18 +16,32 @@ function sumNumbers(arrayOfNumbers)
   }
   else
   {
-    sum = 0;
+    summ = 0;
     for (let index = 0; index < arrayOfNumbers.length; index += 1)
     {
-      sum += arrayOfNumbers[index];
+      if (typeof arrayOfNumbers[index] === "number" || typeof arrayOfNumbers[index] === "string" || typeof arrayOfNumbers[index] === "boolean")
+      {
+        if (typeof arrayOfNumbers[index] === "string")
+        {
+          summ += parseInt(arrayOfNumbers[index]);
+          
+        }
+        else
+        {
+          summ += arrayOfNumbers[index];
+        }
+      }
+      else
+      {
+        return error;
+      }
     }
-    return sum;
+    return summ;
+    
   }
-
-
 }
 
+console.log(sum(numbers2));
+*/
 
 
-
-console.log(sumNumbers(numbers));
