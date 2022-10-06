@@ -1,33 +1,32 @@
-// Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+// Iteration #3: Calculate the sum
+const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function findLongestWord(array) 
+const numbers2 = [1];
+
+function sumNumbers(arrayOfNumbers) 
 {
-  if (array.length === 0)
+  if (arrayOfNumbers.length === 0)
   {
-    return null;
+    return 0;
   }
-  else if (array.length === 1)
+  else if (arrayOfNumbers.length === 1)
   {
-    return array[0];
+    return arrayOfNumbers[0];
   }
-  else (array.length > 1)
+  else
   {
-    let cache = "";
-    for (let index = 0; index < array.length; index +=1)
+    sum = 0;
+    for (let index = 0; index < arrayOfNumbers.length; index += 1)
     {
-      if (array[index].length > cache.length)
-        {
-          cache = array[index];
-        }
+      sum += arrayOfNumbers[index];
     }
-    return cache;
+    return sum;
   }
 
 
-//   for (let index = 0; index < array.length; index += 1)
 }
 
 
 
-console.log(findLongestWord(words));
+
+console.log(sumNumbers(numbers));
