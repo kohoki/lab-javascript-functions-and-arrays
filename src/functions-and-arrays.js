@@ -81,15 +81,14 @@ function sum(arrayOfNumbers)
   }
   else
   {
-    summ = 0;
+    let = summ = 0;
     for (let index = 0; index < arrayOfNumbers.length; index += 1)
     {
       if (typeof arrayOfNumbers[index] === "number" || typeof arrayOfNumbers[index] === "string" || typeof arrayOfNumbers[index] === "boolean")
       {
         if (typeof arrayOfNumbers[index] === "string")
         {
-          summ += parseInt(arrayOfNumbers[index]);
-          
+          summ += arrayOfNumbers[index].length;
         }
         else
         {
@@ -98,7 +97,7 @@ function sum(arrayOfNumbers)
       }
       else
       {
-        return error;
+        throw new Error(`Unsupported data type sir or ma'am`);
       }
     }
     return summ;
@@ -197,7 +196,7 @@ function uniquifyArray(arrayOfStrings)
 
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist(word , arrayOfStrings) 
+function doesWordExist(arrayOfStrings, word) 
 {
   if (arrayOfStrings.length === 0)
   {
